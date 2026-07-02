@@ -1,22 +1,23 @@
 import DashboardLayout from "@/layouts/DashboardLayout";
-import { columns, type Payment } from "@/components/relevantForms/columns";
+import {
+    columns,
+    type DownloadableForm,
+} from "@/components/relevantForms/columns";
 import { DataTable } from "@/components/relevantForms/data-table";
+import { useEffect, useState } from "react";
 
-async function getData(): Promise<Payment[]> {
-    // Fetch data from your API here.
-    return [
-        {
-            id: "728ed52f",
-            amount: 100,
-            status: "pending",
-            email: "m@example.com",
-        },
-        // ...
-    ];
-}
+export default function RelevantFormsPage() {
+    const [data, setData] = useState<DownloadableForm[]>([]);
 
-export default async function RelevantFormsPage() {
-    const data = await getData();
+    useEffect(() => {
+        setData([
+            {
+                id: "728ed52f",
+                name: "Form #1",
+                filePath: "/path/for/form1",
+            },
+        ]);
+    }, []);
 
     return (
         <DashboardLayout>
