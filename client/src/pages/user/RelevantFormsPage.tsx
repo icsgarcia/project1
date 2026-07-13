@@ -3,7 +3,7 @@ import {
     columns,
     type DownloadableForm,
 } from "@/components/relevantForms/columns";
-import { DataTable } from "@/components/relevantForms/data-table";
+import { DataTable } from "@/components/ui/data-table";
 import { useEffect, useState } from "react";
 
 export default function RelevantFormsPage() {
