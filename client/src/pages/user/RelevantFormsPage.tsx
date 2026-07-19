@@ -74,7 +74,7 @@ export default function RelevantFormsPage() {
                                 <TableCell>
                                     <Button
                                         onClick={() => handleClick(form.link)}
-                                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 cursor-pointer"
+                                        className="font-bold py-2 px-4 cursor-pointer"
                                     >
                                         Download
                                     </Button>

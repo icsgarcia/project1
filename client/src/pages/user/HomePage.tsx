@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card";
+import Calendar from "@/components/Calendar";
 
 const HomePage = () => {
     return (
@@ -44,7 +45,9 @@ const HomePage = () => {
                         </Card>
                     </div>
 
-                    <div>Calendar</div>
+                    <div>
+                        <Calendar />
+                    </div>
                 </div>
             </div>
         </DashboardLayout>
