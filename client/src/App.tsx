@@ -6,6 +6,7 @@ import HomePage from "./pages/user/HomePage";
 import ActivityProposalPage from "./pages/user/ActivityProposalPage";
 import RelevantFormsPage from "./pages/user/RelevantFormsPage";
 import ExternalLinksPage from "./pages/user/ExternalLinksPage";
+import CreateActivityProposalPage from "./pages/user/CreateActivityProposalPage";
 
 function App() {
     return (
@@ -15,6 +16,9 @@ function App() {
                     <Route path="/" element={<LoginPage />} />
                     <Route path="/register" element={<RegisterPage />} />
                     <Route path="/home" element={<HomePage />} />
+                    <Route
+                        path="/create-activity-proposal"
+                        element={<CreateActivityProposalPage />} />
                     <Route
                         path="/activity-proposals"
                         element={<ActivityProposalPage />}
