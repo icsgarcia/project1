@@ -2,7 +2,6 @@ import {
     Sidebar,
     SidebarContent,
     SidebarFooter,
-    SidebarGroup,
     SidebarHeader,
     SidebarMenu,
     SidebarMenuItem,
@@ -11,34 +10,50 @@ import {
 import {
     DropdownMenu,
     DropdownMenuContent,
-    DropdownMenuGroup,
     DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronDown } from "lucide-react";
-import { Button } from "./ui/button";
 
 export function AppSidebar() {
     return (
         <Sidebar>
-            <SidebarHeader>
-                <h1>UActTrack</h1>
+            <SidebarHeader className="p-4">
+                <img src="/logos/uacttrack-logo-1.png" alt="uacttrack-logo" />
             </SidebarHeader>
             <SidebarContent>
-                <SidebarMenu className="space-y-4 text-center">
+                <SidebarMenu className="space-y-4 text-center my-4">
                     <SidebarMenuItem>
-                        <a href="/home">Dashboard</a>
+                        <a
+                            href="/home"
+                            className="text-blue-700 hover:text-blue-500 font-semibold"
+                        >
+                            Dashboard
+                        </a>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
-                        <a href="/activity-proposals">Activity Proposals</a>
+                        <a
+                            href="/activity-proposals"
+                            className="text-blue-700 hover:text-blue-500 font-semibold"
+                        >
+                            Activity Proposals
+                        </a>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
-                        <a href="/forms">Relevant Forms</a>
+                        <a
+                            href="/forms"
+                            className="text-blue-700 hover:text-blue-500 font-semibold"
+                        >
+                            Relevant Forms
+                        </a>
                     </SidebarMenuItem>
                     <SidebarMenuItem>
-                        <a href="/external-links">External Links</a>
+                        <a
+                            href="/external-links"
+                            className="text-blue-700 hover:text-blue-500 font-semibold"
+                        >
+                            External Links
+                        </a>
                     </SidebarMenuItem>
                 </SidebarMenu>
             </SidebarContent>
@@ -52,7 +67,13 @@ export function AppSidebar() {
                                     <ChevronDown className="ml-auto" />
                                 </SidebarMenuButton>
                             </DropdownMenuTrigger>
-                            <DropdownMenuContent className="w-[--radix-popper-anchor-width]">
+                            <DropdownMenuContent>
+                                <DropdownMenuItem>
+                                    <span>Profile</span>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem>
+                                    <span>Settings</span>
+                                </DropdownMenuItem>
                                 <DropdownMenuItem>
                                     <span>Log out</span>
                                 </DropdownMenuItem>
