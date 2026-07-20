@@ -58,31 +58,40 @@ export default function RelevantFormsPage() {
     };
     return (
         <DashboardLayout>
-            <div className="p-4">
-                <Table>
-                    <TableCaption>A list of downloadable forms.</TableCaption>
-                    <TableHeader>
-                        <TableRow>
-                            <TableHead>Form Name</TableHead>
-                            <TableHead>Action</TableHead>
-                        </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                        {forms.map((form) => (
+            <div className="px-4 py-8">
+                <div className="flex flex-col gap-4">
+                    <h1 className="text-blue-700 font-bold text-2xl">
+                        Relevant Forms
+                    </h1>
+                    <Table>
+                        <TableCaption>
+                            A list of downloadable forms.
+                        </TableCaption>
+                        <TableHeader>
                             <TableRow>
-                                <TableCell>{form.name}</TableCell>
-                                <TableCell>
-                                    <Button
-                                        onClick={() => handleClick(form.link)}
-                                        className="font-bold py-2 px-4 cursor-pointer"
-                                    >
-                                        Download
-                                    </Button>
-                                </TableCell>
+                                <TableHead>Form Name</TableHead>
+                                <TableHead>Action</TableHead>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
+                        </TableHeader>
+                        <TableBody>
+                            {forms.map((form) => (
+                                <TableRow>
+                                    <TableCell>{form.name}</TableCell>
+                                    <TableCell>
+                                        <Button
+                                            onClick={() =>
+                                                handleClick(form.link)
+                                            }
+                                            className="font-bold py-2 px-4 cursor-pointer"
+                                        >
+                                            Download
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </div>
             </div>
         </DashboardLayout>
     );
